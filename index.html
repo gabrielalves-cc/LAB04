@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Funcionários</title>
+</head>
+<body>
+    <h1>Cadastro de Funcionários</h1>
+
+    <form id="formFuncionario">
+        <input type="text" id="nome" placeholder="Nome" required>
+        <input type="number" id="idade" placeholder="Idade" required>
+        <input type="text" id="cargo" placeholder="Cargo" required>
+        <input type="number" id="salario" placeholder="Salário" step="0.01" required>
+        <button type="submit">Cadastrar</button>
+        <button type="button" id="btnCancelar" style="display:none;">Cancelar Edição</button>
+    </form>
+
+    <hr>
+
+    <h2>Lista de Funcionários</h2>
+    <table id="tabelaFuncionarios" border="1">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Idade</th>
+                <th>Cargo</th>
+                <th>Salário</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody id="corpoTabela">
+        </tbody>
+    </table>
+
+    <hr>
+
+    <h2>Relatórios</h2>
+    <button id="btnSalarioMaior5000">Salário > R$ 5000</button>
+    <button id="btnMediaSalarial">Média Salarial</button>
+    <button id="btnCargosUnicos">Cargos Únicos</button>
+    <button id="btnNomesMaiusculo">Nomes em Maiúsculo</button>
+
+    <div id="relatorio"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
